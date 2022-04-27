@@ -1,5 +1,11 @@
+body, html {
+	height: 100%;
+}
+
 body {
-	background-color: #4EA8DE;
+	background-image: linear-gradient(to bottom right, #03045E, #CAF0F8);
+	background-repeat: no-repeat;
+	font-family: "Cormorant Garamond", serif;
 }
 
 h1, h2 {
@@ -8,19 +14,39 @@ h1, h2 {
 	color: #FFF;
 }
 
-#top {
-	background-color: #5390D9;
-	position: absolute;
-	width: 100%;
-	top: 0;
+p, #projects li {
+	color: #FFF;
+	font-size: 20px;
 }
 
-#top figure img {
+#intro, #aboutme, #projects, #certs {
+	background-image: linear-gradient(to top right, rgba(232, 93, 4, 0.5), rgba(255, 186, 8, 0.5));
+	margin: auto;
+	border-radius: 10px;
+}
+
+#intro {
+	width: 25%;
+}
+
+#aboutme {
+	width: 50%;
+}
+
+#projects {
+	width: 75%;
+	text-align: center;
+}
+
+#projects li {
+	display: inline;
+}
+
+#intro figure img {
 	display: block;
 	width: 200px;
 	height: 200px;
 	object-fit: contain;
 	border-radius: 50%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 }
