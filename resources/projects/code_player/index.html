@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>CodePlayer</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link type="text/css" rel="stylesheet" href="styles.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="topbar">
+				<div id="codeplayer">CodePlayer</div>
+				<div id="toggles">
+					<ul>
+						<li class="toggle selected">HTML</li>
+						<li class="toggle">CSS</li>
+						<li class="toggle">JS</li>
+						<li class="toggle selected" style="border: none">Result</li>
+					</ul>
+				</div>
+			</div>  
+
+			<div class="codeContainer" id="HTMLContainer">
+				<div class="codeLabel">HTML</div>
+				<textarea id="htmlCode"><div id="test">Hi</div></textarea>
+			</div>
+			<div class="codeContainer" id="CSSContainer">
+				<div class="codeLabel">CSS</div>
+				<textarea id="cssCode"></textarea>
+			</div>
+			<div class="codeContainer" id="JSContainer">
+				<div class="codeLabel">JS</div>
+				<textarea id="jsCode"></textarea>
+			</div>
+			<div class="codeContainer" id="ResultContainer" style="background-color: #AED1CA">
+				<div class="codeLabel">Result</div>
+				<iframe id="resultFrame"></iframe>
+			</div>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			var windowHeight = $(window).height();
+			var topBarHeight = $("#topbar").height();
+			var codeContainerHeight = windowHeight-topBarHeight;
+			
+			function updateOutput() {
+                $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssCode").val() + "</style></head><body>" + $("#htmlCode").val() + "</body></html>");
+               	document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+            }
+			
+			$(".codeContainer").height(codeContainerHeight + "px");
+
+			$(".toggle").click(function() {
+
+				$(this).toggleClass("selected");
+
+				var activeDiv = $(this).html();
+
+				$("#"+activeDiv+"Container").toggle();
+
+				var showingDivs = $(".codeContainer").filter(function() {
+
+					return($(this).css("display")!="none");    
+
+				}).length;
+
+				var width = 100/showingDivs;
+
+				$(".codeContainer").width(width+"%");
+			});
+			
+			updateOutput();
+            
+            $("textarea").on('change keyup paste', function() {
+                updateOutput();
+            });
+			
+		</script>
+	</body>
+</html>

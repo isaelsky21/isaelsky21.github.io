@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Paginah | Get help creating something you want</title>
+
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	  <nav class="navbar navbar-toggleable navbar-inverse fixed-top bg-inverse">
+		
+		<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		  
+		<a href="#" class="navbar-brand">Paginah</a>
+
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#topContainer">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#middleContainer">Great</a></li>
+				<li class="nav-item"><a class="nav-link" href="#footer">Download</a></li>
+			</ul>
+
+			<form class="form-inline mt-2 mt-md-0">
+				<div class="form-group">
+					<input class="form-control mr-sm-2" type="email" placeholder="Email" />
+				</div>
+
+				<div class="form-group">
+					<input class="form-control" type="password" placeholder="Password" />
+				</div>
+
+				<button class="btn btn-success my-2 my-sm-0" type="submit">Log In</button>
+			</form>
+		</div>
+      </nav>
+      
+    <div class="container contentContainer" id="topContainer">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 mx-auto" id="topRow">
+                <h1 class="marginTop text-center">Paginah</h1>
+                <p class="lead">Paginah helps you create something that should help with what you're looking for.</p>
+                <p>Go download the app and join the thousands of people around the world.</p>
+                <p class="bold marginTop">Sign up below to get emails about the blog, news and more!</p>
+				<p class="errorMessage bold marginTop" style="color: red"></p>
+                
+                <form class="marginTop">
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        
+                        <input id="email" type="email" class="form-control" placeholder="Your Email"/>
+                        
+                    </div>
+                    
+                    <input type="submit" class="btn btn-success btn-lg marginTop"/>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+          
+    <div class="container contentContainer" id="middleContainer">
+		<br>
+        <h1 class="text-center title">
+			This app is great!<br>
+			<small class="text-muted">Summary of the app's greatness</small>
+		</h1>
+        
+        
+        <div class="row marginBottom marginTop">
+            <div class="col-md-4 marginTop">
+                <h2><span class="glyphicon glyphicon-cloud"></span> Cloud</h2>
+                <p>It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology. It's got Cloud Technology.</p>
+                <button class="btn btn-success marginTop">Sign Up!</button>
+            </div>
+            
+            <div class="col-md-4 marginTop">
+                <h2><span class="glyphicon glyphicon-film"></span> Media</h2>
+                <p>It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media! It can stream Media!</p>
+                <button class="btn btn-success marginTop">Sign Up!</button>
+            </div>
+            
+            <div class="col-md-4 marginTop">
+                <h2><span class="glyphicon glyphicon-globe"></span> Worldwide</h2>
+                <p>It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!! It can be downloaded anywhere!!</p>
+                <button class="btn btn-success marginTop">Sign Up!</button>
+            </div>
+        </div>
+    </div>
+          
+    <div class="container contentContainer" id="footer">
+		<h1 class="title text-center">
+			Download the App!<br>
+			<small class="text-muted">Why not give it a try?</small>
+		</h1>
+		
+		
+		<div class="row marginTop">
+			  <div class="col-md-3 mx-auto">
+				<p><img src="images/appstoreicon.png" class="storeImage" /></p>
+			  </div>
+
+			  <div class="col-md-3 mx-auto">
+				<p><img src="images/playstoreicon.png" class="storeImage" /></p>
+			  </div>
+		  </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <script>
+		$(".contentContainer").css("min-height", $(window).height());
+    </script>
+  </body>
+</html>
