@@ -1,0 +1,57 @@
+body {
+    background: url('images/main-background.jpg') no-repeat fixed center;
+	background-size: 100% 100%;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h3 {
+    margin: auto;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid brown;
+    padding: 8px;
+    width: 600px;
+}
+
+img {
+    width: 100px;
+}
+
+#chardiv {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#character {
+    width: 100px;
+	height: 100px;
+}
+
+#stage1div, #stage2div, #stage3div {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+#HP, #yourtime, #goal {
+    font-weight: bold;
+}
+
+#yourtime, #goal {
+    color: orange;
+}
+
+#yourtime {
+    float: left;
+}
+
+#goal {
+    float: right;
+}

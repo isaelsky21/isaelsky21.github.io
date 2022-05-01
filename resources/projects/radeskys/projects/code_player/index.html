@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>CodePlayer</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link type="text/css" rel="stylesheet" href="styles.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="topbar">
+				<div id="codeplayer">CodePlayer</div>
+				<div id="toggles">
+					<ul>
+						<li class="toggle selected" id="HTML">HTML</li>
+						<li class="toggle" id="CSS">CSS</li>
+						<li class="toggle" id="JS">JS</li>
+						<li class="toggle selected" id="Result">Result</li>
+					</ul>
+				</div>
+			</div>  
+			<div>
+				<textarea class="codeContainer" id="HTMLContainer"><div id="test">Hi</div></textarea>
+				<textarea class="codeContainer hidden" id="CSSContainer">#test {color: white;}</textarea>
+				<textarea class="codeContainer hidden" id="JSContainer">document.getElementById("test").innerHTML += " There!";</textarea>
+				<iframe class="codeContainer" id="ResultContainer"></iframe>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			var windowHeight = $(window).height();
+			var topBarHeight = $("#topbar").height();
+			var codeContainerHeight = (windowHeight-topBarHeight) - 15;
+			
+			function updateOutput() {
+                $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#CSSContainer").val() + "</style></head><body>" + $("#HTMLContainer").val() + "</body></html>");
+               	document.getElementById("ResultContainer").contentWindow.eval($("#JSContainer").val());
+            }
+			
+			$(".codeContainer").height(codeContainerHeight + "px");
+			$(".codeContainer").width($(window).width() / 2);
+
+			$(".toggle").click(function() {
+
+				$(this).toggleClass("selected");
+				
+				var containerId = $(this).attr("id") + "Container";
+                
+                $("#" + containerId).toggleClass("hidden");
+                
+                var numberOfActiveContainers = 4 - $('.hidden').length;
+                
+                $(".codeContainer").width(($(window).width() / numberOfActiveContainers) - 20);
+			});
+			
+			updateOutput();
+            
+            $("textarea").on('change keyup paste', function() {
+                updateOutput();
+            });
+			
+		</script>
+	</body>
+</html>

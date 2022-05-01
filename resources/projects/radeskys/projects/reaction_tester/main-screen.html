@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Choose your Anime</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link type="text/css" rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+		<div id="stage-screen" style="display: none;">
+			<h1>Reaction Test</h1>
+			<h3>Click on the villains as quickly as you can. Watch out for the heroes!</h3>
+			<p id="yourtime">Your time: <span id="time">0</span>s</p><p id="goal">Goal: </p>
+			<div id="chardiv"><p id="HP"></p><img id="character"></div>
+		</div>
+		<div id="main-screen">
+			<h1>Which Anime will you choose?</h1>
+			<h3>Each Anime contains a total of 3 stages with different characters.</h3>
+			<div style="margin: 20px 0px 0px 450px">
+				<img id="dbz" style="padding: 10px;" src="images/goku.jpg">
+				<img id="naruto" style="padding: 10px;" src="images/naruto.jpg">
+				<img id="onepiece" style="padding: 10px;" src="images/luffy.jpg">
+			</div>
+
+			<div style="margin: 100px 0px 0px 450px;">
+				<div id="stage1div"><p id="stage1-title"></p><img id="stage1-img"></div>
+				<div id="stage2div"><p id="stage2-title"></p><img id="stage2-img"></div>
+				<div id="stage3div"><p id="stage3-title"></p><img id="stage3-img"></div>
+			</div>
+			<script type="text/javascript" src="stage-script.js"></script>
+		</div>
+    </body>
+</html>
