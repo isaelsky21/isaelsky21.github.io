@@ -11,6 +11,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	margin-top: 50px;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1, h2, p {
 	color: #FFF;
 }
 
-p, #projects li {
+p, #projects li, #certs li {
 	color: #FFF;
 	font-size: 20px;
 }
@@ -29,6 +30,11 @@ p, #projects li {
 #intro {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+}
+
+#projects {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #intro, #aboutme, #projects, #certs {
@@ -79,16 +85,20 @@ p, #projects li {
 	margin: auto;
 	line-height: 1.0;
 	font-size: 20px;
-	text-decoration: none;
-	border: 1px solid #FFF;
+	color: #005F73;
 }
 
-#projects h2 {
+#projects h2, #certs h2 {
 	border: 1px solid;
 }
 
-#projects ul li {
-	display: inline;
+#projects ul li, #certs ul li {
+	display: inline-block;
+}
+
+#certs ul li img {
+	width: 350px;
+	height: 33%;
 }
 
 #intro figure img {
