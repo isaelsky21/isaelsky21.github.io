@@ -1,0 +1,23 @@
+#main-div {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 1050px;
+  background-color: #EEEEEE;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p, h1, h2, h3, h4 {
+  text-align: center;
+}
+
+.timeline-list {
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
