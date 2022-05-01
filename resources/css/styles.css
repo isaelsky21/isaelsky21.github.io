@@ -3,14 +3,21 @@ body, html {
 }
 
 body {
-	background-image: linear-gradient(to bottom right, #03045E, #CAF0F8);
-	background-repeat: no-repeat;
+	background: linear-gradient(to bottom right, #03045E, #CAF0F8) no-repeat center center fixed;
 	font-family: "Cormorant Garamond", serif;
 }
 
-h1, h2 {
-	font-weight: bold;
+#centerpiece {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h1, h2, p {
 	color: #FFF;
 }
 
@@ -19,33 +26,75 @@ p, #projects li {
 	font-size: 20px;
 }
 
+#intro {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
 #intro, #aboutme, #projects, #certs {
 	background-image: linear-gradient(to top right, rgba(232, 93, 4, 0.5), rgba(255, 186, 8, 0.5));
 	margin: auto;
-	border-radius: 10px;
+	width: 35%;
 }
 
-#intro {
-	width: 25%;
+.socials {
+	list-style-type: none;
+	display: flex;
+}
+
+.socials li {
+	margin: auto;
+}
+
+.socials li img {
+	width: 50%;
+	height: 50%;
+}
+
+.arrow, #aboutme div .arrow {
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	font-size: 35px;
+	border: 5px;
+	border-radius: 50%;
+	padding: 0 10px;
+	background: #ADB5BD;
+	width: 30px;
+	height: 45px;
+	line-height: 1.2;
+	margin: 30px auto;
 }
 
 #aboutme {
-	width: 50%;
+	line-height: 1.5;
 }
 
-#projects {
-	width: 75%;
-	text-align: center;
+#aboutme div {
+	display: flex;
+	flex-direction: column;
 }
 
-#projects li {
+#aboutme a {
+	margin: auto;
+	line-height: 1.0;
+	font-size: 20px;
+	text-decoration: none;
+	border: 1px solid #FFF;
+}
+
+#projects h2 {
+	border: 1px solid;
+}
+
+#projects ul li {
 	display: inline;
 }
 
 #intro figure img {
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	object-fit: contain;
 	border-radius: 50%;
 	margin: auto;
