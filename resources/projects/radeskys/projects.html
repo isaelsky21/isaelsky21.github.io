@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Radesky's | Projects</title>
+		
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Radesky's is a website for showcasing of
+		web development projects by Web Developer Isael Elena." />
+		<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $(".img-hover").mouseenter(function(){
+                    $(".img-hover").css("width", "230px");
+                });
+                $(".img-hover").mouseleave(function(){
+                    $(".img-hover").css("width", "200px");
+                });
+            });
+        </script>
+	</head>
+	<body>
+        <div class="container-fluid">
+            <div class="row logo-border">
+                <a href="http://radeskys.com"><img id="logo-img" class="col-xs-5 img-responsive" src="images/logo.png"/></a>
+                <a href="http://radeskys.com/about.html" class="links col-xs-5" style="float: right;"><strong>About</strong></a>
+                <a href="http://radeskys.com/contact.html" class="links col-xs-5" style="float: right;"><strong>Contact</strong></a>
+                <a href="http://radeskys.com/portfolio.html" class="links col-xs-5" style="float: right;"><strong>Portfolio</strong></a>
+                <a href="http://radeskys.com/projects.html" class="links col-xs-5" style="float: right;"><strong>Projects</strong></a>
+                <a href="http://radeskys.com" class="links col-xs-5" style="float: right;"><strong>Home</strong></a>
+            </div>
+            <br>
+            <div>
+                <h3 class="text-center">FreeCodeCamp Projects:</h3>
+                <div>
+                    <div>
+                        <h4>Project 1: Tribute Page</h4>
+                        <div class="img-hover" style="border: 2px solid yellow; width: 200px;">
+                            <a href="http://codepen.io/isaelsky21/full/mRKWpz/" target="_blank"><img style="width: 100%;" src="images/project1-tribute.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p id="back2top"><a href="#top">Back to top</a></p>
+        </div>
+    </body>
+</html>

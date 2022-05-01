@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>T</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="description" content="Just a test." />
+        <meta name="author" content="Isael Elena">
+		<link rel="icon" type="image/png" href="" sizes="16x16">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<input type="text" id="userInput"/>
+		<button onclick="processInput">Go</button>
+		
+		<script>
+			var character = {
+    			Name : "John",
+				Age       : 50,
+				eyeColor  : "blue"
+				
+			};
+			
+			var file = "memory.txt";
+			
+			function processInput (file) {
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, false);
+				rawFile.onreadystatechange = function ()
+				{
+					if(rawFile.readyState === 4)
+					{
+						if(rawFile.status === 200 || rawFile.status == 0)
+						{
+							var allText = rawFile.responseText;
+							alert(allText);
+						}
+					}
+				}
+				rawFile.send(null);
+			}
+		</script>
+	</body>
+</html>
